@@ -31,6 +31,7 @@ module.exports = {
           'css-loader'
         ]
       },
+
       {
         test: /\.js$/,
         exclude: [
@@ -39,6 +40,7 @@ module.exports = {
         ],
         loader: "eslint-loader"
       },
+
       {
         test: /\.(gif|png|jpe?g)$/,
         use: [
@@ -50,6 +52,18 @@ module.exports = {
             }
           }
         ]
+      },
+
+      {
+        test: /\.js$/,
+        exclude: [
+          /node_modules/,
+          /spec/
+        ],
+        loader: "babel-loader",
+        options: {
+          presets: ['es2015']
+        }
       },
 
       {
