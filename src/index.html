@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <title>Triangle</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+
+      <div class="entry">
+      <h1>Is it a triangle?</h1>
+      <p>Enter numbers to find out what kind of triangle it is.</p>
+        <form class="triangle" id="triangle">
+          <ul class="flex-outer">
+            <li>
+              <label for="sidea">Side A</label>
+              <input type="number" id="sideA" name="sideA" value="" required>
+            </li>
+            <li>
+              <label for="sidea">Side B</label>
+              <input type="number" id="sideB" name="sideB" value="" required>
+            </li>
+            <li>
+              <label for="sidea">Side C</label>
+              <input type="number" id="sideC" name="sideC" value="" required>
+            </li>
+          </ul>
+          <div class="button-row">
+            <button class="btn-primary" type="submit" id="submit" name="submit">Is this a triangle?</button> <button class="btn-reset" type="button" id="reset" name="reset">Reset</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="response-wrapper">
+
+        <div class="response well">
+          <div class="not-triangle">
+            <p>Sorry, these numbers won't make a triangle. The sum of the two shorter sides has to be greater than the longest side. Otherwise, it doesn't close.</p>
+          </div>
+
+          <div class="equilateral">
+            <h1>Equilateral Triangle</h1>
+            <p>All three sides are equal.</p>
+            <img src="./img/equilateral.png" alt="image of equilateral triangle" title="equilateral triangle">
+          </div>
+
+          <div class="isosceles">
+            <h1>Isosceles Triangle</h1>
+              <p>Two of three sides are equal.</p>
+              <img src="./img/isosceles.png" alt="image of isosceles triangle" title="isosceles triangle">
+          </div>
+
+          <div class="scalene">
+            <h1>Scalene Triangle</h1>
+            <p>Each side is a different length.</p>
+            <img class="scalene" src="./img/scalene.png" alt="image of scalene triangle" title="scalene triangle">
+          </div>
+        </div>
+      </div>
+
+<!-- Equilateral: All sides are equal.
+Isosceles: Exactly 2 sides are equal.
+Scalene: No sides are equal.
+NOT a triangle: The sum of the lengths of any two sides of a triangle is less than or equal to the length of the third side. -->
+      <img src="./img/scalene.png" alt="">
+    </div>
+  </body>
+</html>

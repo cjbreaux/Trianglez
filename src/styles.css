@@ -1,0 +1,88 @@
+body {
+  font-size: 1.6rem;
+  background-color: #ffd54f;
+}
+
+
+.container-fluid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 20px 40px;
+  justify-content: flex-start;
+}
+
+.entry {
+  flex: 1 0 400px;
+}
+
+.response-wrapper {
+  display: none;
+}
+
+.response {
+  flex: 1 0 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 4px 4px 10px rgba(100, 100, 100, 0.5);
+  flex-wrap: nowrap;
+}
+
+.not-triangle, .equilateral, .isosceles, .scalene {
+  display: none;
+}
+
+img.scalene {
+  width: 600px;
+}
+
+img {
+  max-height: 400px;
+}
+
+label {
+  font-weight: normal;
+}
+
+.flex-outer li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.flex-outer > li > label,
+.flex-outer li p {
+  flex: 1 0 120px;
+  max-width: 80px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.flex-outer > li > label + * {
+  flex: 1 0 220px;
+  max-width: 80px;
+}
+
+.button-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.btn-primary, .btn-reset {
+  padding: 4px 8px 4px 8px;
+  min-width: 100px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.btn-reset {
+  background-color: #ff8f00;
+  margin-left: 20px;
+}
