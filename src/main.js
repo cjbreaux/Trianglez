@@ -4,6 +4,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+
 $(document).ready(function(){
   $("form#triangle").submit(function(event){
     var a = parseInt($("input#sideA").val());
