@@ -19,4 +19,15 @@ describe('Triangle', function() {
     expect(equilateralTriangle.checkEquilateral()).toEqual("is a equilateral triangle");
   });
 
+  it('should correctly determine whether three lengths makes an isosceles triangle', function() {
+    var isosceles = new Triangle(2,2,4);
+    expect(isosceles.checkIsosceles()).toEqual("is an isosceles triangle");
+  });
+
+  it('should correctly determine whether three lengths makes an scalene triangle', function() {
+    var scalene  = new Triangle(9,5,8);
+    expect(scalene .checkScalene ()).toEqual("is an scalene  triangle");
+  });
+
+
 });

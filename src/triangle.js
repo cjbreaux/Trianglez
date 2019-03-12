@@ -8,11 +8,25 @@ export function Triangle(side1, side2, side3) {
 Triangle.prototype.checkType = function() {
   if ((this.side1 > (this.side2 + this.side3)) || (this.side2 > (this.side1 + this.side3)) || (this.side3 > (this.side1 + this.side2))) {
     return "not a triangle";
-    }
-  };
+  }
+};
 
-  Triangle.prototype.checkEquilateral = function() {
-    if (((this.side1 === this.side2) && (this.side2 === this.side3))) {
-      return "is a equilateral triangle"
-    }
-  };
+Triangle.prototype.checkEquilateral = function() {
+  if (((this.side1 === this.side2) && (this.side2 === this.side3))) {
+    return "is a equilateral triangle";
+  }
+};
+
+Triangle.prototype.checkIsosceles = function() {
+  if ((this.side1 === this.side2) || (this.side2 === this.side3) || (this.side1 === this.side3)) {
+    return "is an isosceles triangle";
+  }
+};
+
+Triangle.prototype.checkScalene = function() {
+  if ((this.side1 !== this.side2) && (this.side2 !== this.side3) && (this.side1 !== this.side3)) {
+    return "is an scalene  triangle";
+  } else {
+    return "this test didnt pass";
+  }
+};
