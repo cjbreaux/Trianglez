@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src\triangle.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">src/</a> triangle.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">30.77% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>8/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>1/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">27.27% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/1</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1</td><td class="line-coverage quiet"><span class="cline-any cline-yes">2×</span></td><td class="text"><pre class="prettyprint lang-js">!function(e){var t={};function s(i){<span class="missing-if-branch" title="if path not taken" >I</span>if(t[i])<span class="cstat-no" title="statement not covered" >return t[i].exports;v</span>ar n=t[i]={i:i,l:!1,exports:{}};return e[i].call(n.exports,n,n.exports,s),n.l=!0,n.exports}s.m=e,s.c=t,s.d=<span class="fstat-no" title="function not covered" >function(e,t,i){<span class="cstat-no" title="statement not covered" ></span>s.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:i})}</span>,s.r=<span class="fstat-no" title="function not covered" >function(e){<span class="cstat-no" title="statement not covered" ></span>"undefined"!=typeof Symbol&amp;&amp;Symbol.toStringTag&amp;&amp;Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})}</span>,s.t=<span class="fstat-no" title="function not covered" >function(e,t){<span class="cstat-no" title="statement not covered" ></span>if(1&amp;t&amp;&amp;(e=s(e)),8&amp;t)<span class="cstat-no" title="statement not covered" >return e;<span class="cstat-no" title="statement not covered" >i</span></span>f(4&amp;t&amp;&amp;"object"==typeof e&amp;&amp;e&amp;&amp;e.__esModule)<span class="cstat-no" title="statement not covered" >return e;<span class="cstat-no" title="statement not covered" >v</span></span>ar i=Object.create(null);<span class="cstat-no" title="statement not covered" >i</span>f(s.r(i),Object.defineProperty(i,"default",{enumerable:!0,value:e}),2&amp;t&amp;&amp;"string"!=typeof e)<span class="cstat-no" title="statement not covered" >for(var n in e)<span class="cstat-no" title="statement not covered" >s.d(i,n,<span class="fstat-no" title="function not covered" >function(t){<span class="cstat-no" title="statement not covered" ></span>return e[t]}</span>.bind(null,n));<span class="cstat-no" title="statement not covered" >r</span></span></span>eturn i}</span>,s.n=<span class="fstat-no" title="function not covered" >function(e){<span class="cstat-no" title="statement not covered" ></span>var t=e&amp;&amp;e.__esModule?<span class="fstat-no" title="function not covered" >function(){<span class="cstat-no" title="statement not covered" ></span>return e.default}</span>:<span class="fstat-no" title="function not covered" >function(){<span class="cstat-no" title="statement not covered" ></span>return e}</span>;<span class="cstat-no" title="statement not covered" >r</span>eturn s.d(t,"a",t),t}</span>,s.o=<span class="fstat-no" title="function not covered" >function(e,t){<span class="cstat-no" title="statement not covered" ></span>return Object.prototype.hasOwnProperty.call(e,t)}</span>,s.p="C:\\Users\\Chris\\AppData\\Local\\Temp\\_karma_webpack_\\",s(s.s=12)}({12:function(module,exports,__webpack_require__){"use strict";eval('\n\nObject.defineProperty(exports, "__esModule", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }\n\nvar Triangle = exports.Triangle = function () {\n  function Triangle(side1, side2, side3) {\n    _classCallCheck(this, Triangle);\n\n    this.side1 = side1;\n    this.side2 = side2;\n    this.side3 = side3;\n  }\n\n  _createClass(Triangle, [{\n    key: "checkType",\n    value: function checkType() {\n      if (this.side1 &gt; this.side2 + this.side3 || this.side2 &gt; this.side1 + this.side3 || this.side3 &gt; this.side1 + this.side2) {\n        return "not a triangle";\n      }\n    }\n  }, {\n    key: "checkEquilateral",\n    value: function checkEquilateral() {\n      if (this.side1 === this.side2 &amp;&amp; this.side2 === this.side3) {\n        return "is a equilateral triangle";\n      }\n    }\n  }, {\n    key: "checkIsosceles",\n    value: function checkIsosceles() {\n      if (this.side1 === this.side2 || this.side2 === this.side3 || this.side1 === this.side3) {\n        return "is an isosceles triangle";\n      }\n    }\n  }, {\n    key: "checkScalene",\n    value: function checkScalene() {\n      if (this.side1 !== this.side2 &amp;&amp; this.side2 !== this.side3 &amp;&amp; this.side1 !== this.side3) {\n        return "is an scalene  triangle";\n      } else {\n        return "this test didnt pass";\n      }\n    }\n  }]);\n\n  return Triangle;\n}();//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvdHJpYW5nbGUuanM/NGYwZCJdLCJuYW1lcyI6WyJUcmlhbmdsZSIsInNpZGUxIiwic2lkZTIiLCJzaWRlMyJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztJQUNhQSxRLFdBQUFBLFE7QUFDWCxvQkFBWUMsS0FBWixFQUFtQkMsS0FBbkIsRUFBMEJDLEtBQTFCLEVBQWlDO0FBQUE7O0FBQy9CLFNBQUtGLEtBQUwsR0FBYUEsS0FBYjtBQUNBLFNBQUtDLEtBQUwsR0FBYUEsS0FBYjtBQUNBLFNBQUtDLEtBQUwsR0FBYUEsS0FBYjtBQUNEOzs7O2dDQUNXO0FBQ1YsVUFBSyxLQUFLRixLQUFMLEdBQWMsS0FBS0MsS0FBTCxHQUFhLEtBQUtDLEtBQWpDLElBQTZDLEtBQUtELEtBQUwsR0FBYyxLQUFLRCxLQUFMLEdBQWEsS0FBS0UsS0FBN0UsSUFBeUYsS0FBS0EsS0FBTCxHQUFjLEtBQUtGLEtBQUwsR0FBYSxLQUFLQyxLQUE3SCxFQUFzSTtBQUNwSSxlQUFPLGdCQUFQO0FBQ0Q7QUFDRjs7O3VDQUVrQjtBQUNqQixVQUFNLEtBQUtELEtBQUwsS0FBZSxLQUFLQyxLQUFyQixJQUFnQyxLQUFLQSxLQUFMLEtBQWUsS0FBS0MsS0FBekQsRUFBa0U7QUFDaEUsZUFBTywyQkFBUDtBQUNEO0FBQ0Y7OztxQ0FFZ0I7QUFDZixVQUFLLEtBQUtGLEtBQUwsS0FBZSxLQUFLQyxLQUFyQixJQUFnQyxLQUFLQSxLQUFMLEtBQWUsS0FBS0MsS0FBcEQsSUFBK0QsS0FBS0YsS0FBTCxLQUFlLEtBQUtFLEtBQXZGLEVBQStGO0FBQzdGLGVBQU8sMEJBQVA7QUFDRDtBQUNGOzs7bUNBQ2M7QUFDYixVQUFLLEtBQUtGLEtBQUwsS0FBZSxLQUFLQyxLQUFyQixJQUFnQyxLQUFLQSxLQUFMLEtBQWUsS0FBS0MsS0FBcEQsSUFBK0QsS0FBS0YsS0FBTCxLQUFlLEtBQUtFLEtBQXZGLEVBQStGO0FBQzdGLGVBQU8seUJBQVA7QUFDRCxPQUZELE1BRU87QUFDTCxlQUFPLHNCQUFQO0FBQ0Q7QUFDRiIsImZpbGUiOiIxMi5qcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG5leHBvcnQgY2xhc3MgVHJpYW5nbGUge1xyXG4gIGNvbnN0cnVjdG9yKHNpZGUxLCBzaWRlMiwgc2lkZTMpIHtcclxuICAgIHRoaXMuc2lkZTEgPSBzaWRlMTtcclxuICAgIHRoaXMuc2lkZTIgPSBzaWRlMjtcclxuICAgIHRoaXMuc2lkZTMgPSBzaWRlMztcclxuICB9XHJcbiAgY2hlY2tUeXBlKCkge1xyXG4gICAgaWYgKCh0aGlzLnNpZGUxID4gKHRoaXMuc2lkZTIgKyB0aGlzLnNpZGUzKSkgfHwgKHRoaXMuc2lkZTIgPiAodGhpcy5zaWRlMSArIHRoaXMuc2lkZTMpKSB8fCAodGhpcy5zaWRlMyA+ICh0aGlzLnNpZGUxICsgdGhpcy5zaWRlMikpKSB7XHJcbiAgICAgIHJldHVybiBcIm5vdCBhIHRyaWFuZ2xlXCI7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICBjaGVja0VxdWlsYXRlcmFsKCkge1xyXG4gICAgaWYgKCgodGhpcy5zaWRlMSA9PT0gdGhpcy5zaWRlMikgJiYgKHRoaXMuc2lkZTIgPT09IHRoaXMuc2lkZTMpKSkge1xyXG4gICAgICByZXR1cm4gXCJpcyBhIGVxdWlsYXRlcmFsIHRyaWFuZ2xlXCI7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICBjaGVja0lzb3NjZWxlcygpIHtcclxuICAgIGlmICgodGhpcy5zaWRlMSA9PT0gdGhpcy5zaWRlMikgfHwgKHRoaXMuc2lkZTIgPT09IHRoaXMuc2lkZTMpIHx8ICh0aGlzLnNpZGUxID09PSB0aGlzLnNpZGUzKSkge1xyXG4gICAgICByZXR1cm4gXCJpcyBhbiBpc29zY2VsZXMgdHJpYW5nbGVcIjtcclxuICAgIH1cclxuICB9XHJcbiAgY2hlY2tTY2FsZW5lKCkge1xyXG4gICAgaWYgKCh0aGlzLnNpZGUxICE9PSB0aGlzLnNpZGUyKSAmJiAodGhpcy5zaWRlMiAhPT0gdGhpcy5zaWRlMykgJiYgKHRoaXMuc2lkZTEgIT09IHRoaXMuc2lkZTMpKSB7XHJcbiAgICAgIHJldHVybiBcImlzIGFuIHNjYWxlbmUgIHRyaWFuZ2xlXCI7XHJcbiAgICB9IGVsc2Uge1xyXG4gICAgICByZXR1cm4gXCJ0aGlzIHRlc3QgZGlkbnQgcGFzc1wiO1xyXG4gICAgfVxyXG4gIH1cclxufVxyXG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///12\n')}});</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Mar 12 2019 21:01:19 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

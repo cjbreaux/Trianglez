@@ -12,23 +12,32 @@ module.exports = function(config) {
     exclude: [
     ],
     preprocessors: {
-      'src/*.js': ['webpack'],
-      'spec/*spec.js': ['webpack']
+      'src/*.js': ['webpack', 'coverage'],
+      'spec/*spec.js': ['webpack', 'coverage']
     },
     plugins: [
       'karma-jquery',
       'karma-webpack',
       'karma-jasmine',
       'karma-chrome-launcher',
-      'karma-jasmine-html-reporter'
+      'karma-jasmine-html-reporter',
+      'karma-coverage'
     ],
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['progress', 'kjhtml', 'coverage'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'],
     singleRun: false,
-    concurrency: Infinity
+    concurrency: Infinity,
+    coverageReporter: {
+            includeAllSources: true,
+            dir: 'coverage/',
+            reporters: [
+                { type: "html", subdir: "html" },
+                { type: 'text-summary' }
+            ]
+        }
   })
 }
